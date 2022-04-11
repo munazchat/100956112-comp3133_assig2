@@ -1,0 +1,11 @@
+.frm-group {
+    width: 300px;
+    margin: 8px;
+    display: inline-block;
+    margin-top: 10%;
+    background-color: rgb(245, 245, 245);
+}
+
+.header {
+    text-align: center;
+}

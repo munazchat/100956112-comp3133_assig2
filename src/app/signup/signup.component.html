@@ -1,0 +1,31 @@
+<h1 class="header"> Please Signup</h1>
+
+<div>
+
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+        <div class="frm-group">
+            <label for="username">Username</label>
+            <input type="username" formControlName="username">
+        </div>
+
+        <div class="frm-group">
+            <label for="email">Email Address</label>
+            <input type="email" formControlName="emailAddress">
+        </div>
+
+        {{ $any(authForm.get('emailAddress')).errors | json }}
+
+        <div class="frm-group">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password">
+        </div>
+        <div class="frm-group">
+            <label for="passwordConfirmation">Password Confirmation</label>
+            <input type="passwordConfirmation" formControlName="passwordConfirmation">
+        </div>
+        <button type="submit">Submit Form</button> {{ authForm.errors | json }}
+    </form>
+
+
+
+</div>
